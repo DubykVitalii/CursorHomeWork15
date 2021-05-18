@@ -10,7 +10,7 @@ CREATE TABLE planes
     seats INT
 );
 
-CREATE table planes_in_airport
+CREATE TABLE planes_in_airport
 (
     id            INT PRIMARY KEY,
     id_planes     INT         NOT NULL,
@@ -18,7 +18,7 @@ CREATE table planes_in_airport
     CONSTRAINT serial_planes_planes_fk FOREIGN KEY (id_planes) REFERENCES planes (id)
 );
 
-CREATE table pilots
+CREATE TABLE pilots
 (
     id                  INT PRIMARY KEY,
     identification_code INT,
