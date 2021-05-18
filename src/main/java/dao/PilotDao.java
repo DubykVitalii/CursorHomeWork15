@@ -9,13 +9,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PilotDao {
     private static PilotDao entity;
     /**
      * HashMap pilots <identificationCode, Pilot>
      * */
-    private HashMap<Integer, Pilot> mapPilots = new HashMap<>();
+    private Map<Integer, Pilot> mapPilots = new HashMap<>();
     /**
      * List pilots <Pilot>
      * */
@@ -59,7 +60,7 @@ public class PilotDao {
         return listPilots;
     }
 
-    public HashMap<Integer, Pilot> getListPilot() {
+    public Map<Integer, Pilot> getListPilot() {
         return mapPilots;
     }
 

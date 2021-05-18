@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PlaneDao {
 
@@ -20,7 +21,7 @@ public class PlaneDao {
     /**
      * HashMap planes <id, model>
      * */
-    private HashMap<Integer, String> listNamePlanes = new HashMap<>();
+    private Map<Integer, String> listNamePlanes = new HashMap<>();
 
     private PlaneDao() {
         String sql = "SELECT * FROM planes inner join planes_in_airport plans on planes.id = plans.id_planes;";
@@ -57,7 +58,7 @@ public class PlaneDao {
         return planes;
     }
 
-    public HashMap<Integer, String> getListNamePlanes() {
+    public Map<Integer, String> getListNamePlanes() {
         return listNamePlanes;
     }
 
